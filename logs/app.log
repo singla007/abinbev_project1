@@ -1,0 +1,352 @@
+[2025-04-18 21:04:30] [INFO] src.qa_bot: Received query: what is foundation on which Ubuntu Core 20 is built
+[2025-04-18 21:04:30] [INFO] src.qa_bot: Initializing QA chain with model: llama3.2
+[2025-04-18 21:04:30] [INFO] src.vector_store: Loading vector store from: vector_store/faiss_index
+[2025-04-18 21:04:37] [INFO] src.vector_store: Vector store loaded successfully.
+[2025-04-18 21:04:37] [INFO] src.qa_bot: QA chain successfully initialized.
+[2025-04-18 21:04:41] [INFO] src.qa_bot: Answer generated successfully.
+[2025-04-18 21:04:41] [DEBUG] src.qa_bot: Answer: The foundation on which Ubuntu Core 20 is built is Ubuntu 20.04 LTS (Focal Fossa).
+[2025-04-18 21:04:41] [DEBUG] src.qa_bot: Number of source documents retrieved: 4
+[2025-04-18 21:05:09] [INFO] src.qa_bot: Received query: what is foundation on which Ubuntu Core 20 is built
+[2025-04-18 21:05:09] [INFO] src.qa_bot: Initializing QA chain with model: llama3.2
+[2025-04-18 21:05:09] [INFO] src.vector_store: Loading vector store from: vector_store/faiss_index
+[2025-04-18 21:05:16] [INFO] src.vector_store: Vector store loaded successfully.
+[2025-04-18 21:05:16] [INFO] src.qa_bot: QA chain successfully initialized.
+[2025-04-18 21:05:19] [INFO] src.qa_bot: Answer generated successfully.
+[2025-04-18 21:05:19] [DEBUG] src.qa_bot: Answer: Ubuntu Core 20 (UC20) is built on the foundation of Ubuntu 20.04 LTS (Focal Fossa).
+[2025-04-18 21:05:19] [DEBUG] src.qa_bot: Number of source documents retrieved: 4
+[2025-04-18 21:05:45] [INFO] src.qa_bot: Received query: what is foundation on which Ubuntu Core 20 is built
+[2025-04-18 21:05:45] [INFO] src.qa_bot: Initializing QA chain with model: llama3.2
+[2025-04-18 21:05:45] [INFO] src.vector_store: Loading vector store from: vector_store/faiss_index
+[2025-04-18 21:05:52] [INFO] src.vector_store: Vector store loaded successfully.
+[2025-04-18 21:05:52] [INFO] src.qa_bot: QA chain successfully initialized.
+[2025-04-18 21:05:58] [INFO] src.qa_bot: Answer generated successfully.
+[2025-04-18 21:05:58] [DEBUG] src.qa_bot: Answer: Ubuntu 20.04 LTS (Focal Fossa).
+[2025-04-18 21:05:58] [DEBUG] src.qa_bot: Number of source documents retrieved: 4
+[2025-04-18 21:15:50] [INFO] main: Received query: what is foundation on which Ubuntu Core 20 is built
+[2025-04-18 21:15:50] [INFO] src.qa_bot: Received query: what is foundation on which Ubuntu Core 20 is built
+[2025-04-18 21:15:50] [INFO] src.qa_bot: Initializing QA chain with model: llama3.2
+[2025-04-18 21:15:50] [INFO] src.vector_store: Loading vector store from: vector_store/faiss_index
+[2025-04-18 21:15:50] [ERROR] src.vector_store: Failed to load vector store: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 84, in __init__
+    import sentence_transformers
+ModuleNotFoundError: No module named 'sentence_transformers'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/yogesh/Documents/abinbev_project1/src/vector_store.py", line 47, in load_vector_store
+    embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_core/_api/deprecation.py", line 216, in warn_if_direct_instance
+    return wrapped(self, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 87, in __init__
+    raise ImportError(
+ImportError: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:15:50] [ERROR] src.qa_bot: Error initializing QA chain: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:15:50] [ERROR] src.qa_bot: Error during question answering: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:15:50] [ERROR] main: Error processing query: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 84, in __init__
+    import sentence_transformers
+ModuleNotFoundError: No module named 'sentence_transformers'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/yogesh/Documents/abinbev_project1/main.py", line 38, in get_answer
+    answer, sources = ask_question(query)
+  File "/Users/yogesh/Documents/abinbev_project1/src/qa_bot.py", line 30, in ask_question
+    qa_chain = get_qa_chain(model_name=model_name)
+  File "/Users/yogesh/Documents/abinbev_project1/src/qa_bot.py", line 13, in get_qa_chain
+    vectordb = load_vector_store()
+  File "/Users/yogesh/Documents/abinbev_project1/src/vector_store.py", line 47, in load_vector_store
+    embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_core/_api/deprecation.py", line 216, in warn_if_direct_instance
+    return wrapped(self, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 87, in __init__
+    raise ImportError(
+ImportError: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:16:07] [INFO] main: Received query: what is foundation on which Ubuntu Core 20 is built
+[2025-04-18 21:16:07] [INFO] src.qa_bot: Received query: what is foundation on which Ubuntu Core 20 is built
+[2025-04-18 21:16:07] [INFO] src.qa_bot: Initializing QA chain with model: llama3.2
+[2025-04-18 21:16:07] [INFO] src.vector_store: Loading vector store from: vector_store/faiss_index
+[2025-04-18 21:16:07] [ERROR] src.vector_store: Failed to load vector store: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 84, in __init__
+    import sentence_transformers
+ModuleNotFoundError: No module named 'sentence_transformers'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/yogesh/Documents/abinbev_project1/src/vector_store.py", line 47, in load_vector_store
+    embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_core/_api/deprecation.py", line 216, in warn_if_direct_instance
+    return wrapped(self, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 87, in __init__
+    raise ImportError(
+ImportError: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:16:07] [ERROR] src.qa_bot: Error initializing QA chain: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:16:07] [ERROR] src.qa_bot: Error during question answering: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:16:07] [ERROR] main: Error processing query: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 84, in __init__
+    import sentence_transformers
+ModuleNotFoundError: No module named 'sentence_transformers'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/yogesh/Documents/abinbev_project1/main.py", line 38, in get_answer
+    answer, sources = ask_question(query)
+  File "/Users/yogesh/Documents/abinbev_project1/src/qa_bot.py", line 30, in ask_question
+    qa_chain = get_qa_chain(model_name=model_name)
+  File "/Users/yogesh/Documents/abinbev_project1/src/qa_bot.py", line 13, in get_qa_chain
+    vectordb = load_vector_store()
+  File "/Users/yogesh/Documents/abinbev_project1/src/vector_store.py", line 47, in load_vector_store
+    embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_core/_api/deprecation.py", line 216, in warn_if_direct_instance
+    return wrapped(self, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 87, in __init__
+    raise ImportError(
+ImportError: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:24:54] [INFO] main: Received query: what is foundation on which Ubuntu Core 20 is built
+[2025-04-18 21:24:54] [INFO] src.qa_bot: Received query: what is foundation on which Ubuntu Core 20 is built
+[2025-04-18 21:24:54] [INFO] src.qa_bot: Initializing QA chain with model: llama3.2
+[2025-04-18 21:24:54] [INFO] src.vector_store: Loading vector store from: vector_store/faiss_index
+[2025-04-18 21:24:54] [ERROR] src.vector_store: Failed to load vector store: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 84, in __init__
+    import sentence_transformers
+ModuleNotFoundError: No module named 'sentence_transformers'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/yogesh/Documents/abinbev_project1/src/vector_store.py", line 47, in load_vector_store
+    embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_core/_api/deprecation.py", line 216, in warn_if_direct_instance
+    return wrapped(self, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 87, in __init__
+    raise ImportError(
+ImportError: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:24:54] [ERROR] src.qa_bot: Error initializing QA chain: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:24:54] [ERROR] src.qa_bot: Error during question answering: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:24:54] [ERROR] main: Error processing query: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 84, in __init__
+    import sentence_transformers
+ModuleNotFoundError: No module named 'sentence_transformers'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/yogesh/Documents/abinbev_project1/main.py", line 38, in get_answer
+    answer, sources = ask_question(query)
+  File "/Users/yogesh/Documents/abinbev_project1/src/qa_bot.py", line 30, in ask_question
+    qa_chain = get_qa_chain(model_name=model_name)
+  File "/Users/yogesh/Documents/abinbev_project1/src/qa_bot.py", line 13, in get_qa_chain
+    vectordb = load_vector_store()
+  File "/Users/yogesh/Documents/abinbev_project1/src/vector_store.py", line 47, in load_vector_store
+    embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_core/_api/deprecation.py", line 216, in warn_if_direct_instance
+    return wrapped(self, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 87, in __init__
+    raise ImportError(
+ImportError: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:24:55] [INFO] main: Received query: what is foundation on which Ubuntu Core 20 is built
+[2025-04-18 21:24:55] [INFO] src.qa_bot: Received query: what is foundation on which Ubuntu Core 20 is built
+[2025-04-18 21:24:55] [INFO] src.qa_bot: Initializing QA chain with model: llama3.2
+[2025-04-18 21:24:55] [INFO] src.vector_store: Loading vector store from: vector_store/faiss_index
+[2025-04-18 21:24:55] [ERROR] src.vector_store: Failed to load vector store: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 84, in __init__
+    import sentence_transformers
+ModuleNotFoundError: No module named 'sentence_transformers'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/yogesh/Documents/abinbev_project1/src/vector_store.py", line 47, in load_vector_store
+    embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_core/_api/deprecation.py", line 216, in warn_if_direct_instance
+    return wrapped(self, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 87, in __init__
+    raise ImportError(
+ImportError: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:24:55] [ERROR] src.qa_bot: Error initializing QA chain: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:24:55] [ERROR] src.qa_bot: Error during question answering: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:24:55] [ERROR] main: Error processing query: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 84, in __init__
+    import sentence_transformers
+ModuleNotFoundError: No module named 'sentence_transformers'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/yogesh/Documents/abinbev_project1/main.py", line 38, in get_answer
+    answer, sources = ask_question(query)
+  File "/Users/yogesh/Documents/abinbev_project1/src/qa_bot.py", line 30, in ask_question
+    qa_chain = get_qa_chain(model_name=model_name)
+  File "/Users/yogesh/Documents/abinbev_project1/src/qa_bot.py", line 13, in get_qa_chain
+    vectordb = load_vector_store()
+  File "/Users/yogesh/Documents/abinbev_project1/src/vector_store.py", line 47, in load_vector_store
+    embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_core/_api/deprecation.py", line 216, in warn_if_direct_instance
+    return wrapped(self, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 87, in __init__
+    raise ImportError(
+ImportError: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:29:22] [INFO] main: Received query: what is foundation on which Ubuntu Core 20 is built
+[2025-04-18 21:29:22] [INFO] src.qa_bot: Received query: what is foundation on which Ubuntu Core 20 is built
+[2025-04-18 21:29:22] [INFO] src.qa_bot: Initializing QA chain with model: llama3.2
+[2025-04-18 21:29:22] [INFO] src.vector_store: Loading vector store from: vector_store/faiss_index
+[2025-04-18 21:29:22] [ERROR] src.vector_store: Failed to load vector store: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 84, in __init__
+    import sentence_transformers
+ModuleNotFoundError: No module named 'sentence_transformers'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/yogesh/Documents/abinbev_project1/src/vector_store.py", line 47, in load_vector_store
+    embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_core/_api/deprecation.py", line 216, in warn_if_direct_instance
+    return wrapped(self, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 87, in __init__
+    raise ImportError(
+ImportError: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:29:22] [ERROR] src.qa_bot: Error initializing QA chain: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:29:22] [ERROR] src.qa_bot: Error during question answering: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:29:22] [ERROR] main: Error processing query: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 84, in __init__
+    import sentence_transformers
+ModuleNotFoundError: No module named 'sentence_transformers'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/yogesh/Documents/abinbev_project1/main.py", line 38, in get_answer
+    answer, sources = ask_question(query)
+  File "/Users/yogesh/Documents/abinbev_project1/src/qa_bot.py", line 30, in ask_question
+    qa_chain = get_qa_chain(model_name=model_name)
+  File "/Users/yogesh/Documents/abinbev_project1/src/qa_bot.py", line 13, in get_qa_chain
+    vectordb = load_vector_store()
+  File "/Users/yogesh/Documents/abinbev_project1/src/vector_store.py", line 47, in load_vector_store
+    embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_core/_api/deprecation.py", line 216, in warn_if_direct_instance
+    return wrapped(self, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 87, in __init__
+    raise ImportError(
+ImportError: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:29:47] [INFO] main: Received query: hi
+[2025-04-18 21:29:47] [INFO] src.qa_bot: Received query: hi
+[2025-04-18 21:29:47] [INFO] src.qa_bot: Initializing QA chain with model: llama3.2
+[2025-04-18 21:29:47] [INFO] src.vector_store: Loading vector store from: vector_store/faiss_index
+[2025-04-18 21:29:47] [ERROR] src.vector_store: Failed to load vector store: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 84, in __init__
+    import sentence_transformers
+ModuleNotFoundError: No module named 'sentence_transformers'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/yogesh/Documents/abinbev_project1/src/vector_store.py", line 47, in load_vector_store
+    embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_core/_api/deprecation.py", line 216, in warn_if_direct_instance
+    return wrapped(self, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 87, in __init__
+    raise ImportError(
+ImportError: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:29:47] [ERROR] src.qa_bot: Error initializing QA chain: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:29:47] [ERROR] src.qa_bot: Error during question answering: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:29:47] [ERROR] main: Error processing query: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 84, in __init__
+    import sentence_transformers
+ModuleNotFoundError: No module named 'sentence_transformers'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/yogesh/Documents/abinbev_project1/main.py", line 38, in get_answer
+    answer, sources = ask_question(query)
+  File "/Users/yogesh/Documents/abinbev_project1/src/qa_bot.py", line 30, in ask_question
+    qa_chain = get_qa_chain(model_name=model_name)
+  File "/Users/yogesh/Documents/abinbev_project1/src/qa_bot.py", line 13, in get_qa_chain
+    vectordb = load_vector_store()
+  File "/Users/yogesh/Documents/abinbev_project1/src/vector_store.py", line 47, in load_vector_store
+    embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_core/_api/deprecation.py", line 216, in warn_if_direct_instance
+    return wrapped(self, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/embeddings/huggingface.py", line 87, in __init__
+    raise ImportError(
+ImportError: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+[2025-04-18 21:34:02] [INFO] main: Received query: hi
+[2025-04-18 21:34:02] [INFO] src.qa_bot: Received query: hi
+[2025-04-18 21:34:02] [INFO] src.qa_bot: Initializing QA chain with model: llama3.2
+[2025-04-18 21:34:02] [INFO] src.vector_store: Loading vector store from: vector_store/faiss_index
+[2025-04-18 21:34:15] [ERROR] src.vector_store: Failed to load vector store: Could not import faiss python package. Please install it with `pip install faiss-gpu` (for CUDA supported GPU) or `pip install faiss-cpu` (depending on Python version).
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/vectorstores/faiss.py", line 55, in dependable_faiss_import
+    import faiss
+ModuleNotFoundError: No module named 'faiss'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yogesh/Documents/abinbev_project1/src/vector_store.py", line 48, in load_vector_store
+    vectordb = FAISS.load_local(VECTOR_STORE_PATH, embeddings, allow_dangerous_deserialization=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/vectorstores/faiss.py", line 1202, in load_local
+    faiss = dependable_faiss_import()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/vectorstores/faiss.py", line 57, in dependable_faiss_import
+    raise ImportError(
+ImportError: Could not import faiss python package. Please install it with `pip install faiss-gpu` (for CUDA supported GPU) or `pip install faiss-cpu` (depending on Python version).
+[2025-04-18 21:34:15] [ERROR] src.qa_bot: Error initializing QA chain: Could not import faiss python package. Please install it with `pip install faiss-gpu` (for CUDA supported GPU) or `pip install faiss-cpu` (depending on Python version).
+[2025-04-18 21:34:15] [ERROR] src.qa_bot: Error during question answering: Could not import faiss python package. Please install it with `pip install faiss-gpu` (for CUDA supported GPU) or `pip install faiss-cpu` (depending on Python version).
+[2025-04-18 21:34:15] [ERROR] main: Error processing query: Could not import faiss python package. Please install it with `pip install faiss-gpu` (for CUDA supported GPU) or `pip install faiss-cpu` (depending on Python version).
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/vectorstores/faiss.py", line 55, in dependable_faiss_import
+    import faiss
+ModuleNotFoundError: No module named 'faiss'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yogesh/Documents/abinbev_project1/main.py", line 38, in get_answer
+    answer, sources = ask_question(query)
+  File "/Users/yogesh/Documents/abinbev_project1/src/qa_bot.py", line 30, in ask_question
+    qa_chain = get_qa_chain(model_name=model_name)
+  File "/Users/yogesh/Documents/abinbev_project1/src/qa_bot.py", line 13, in get_qa_chain
+    vectordb = load_vector_store()
+  File "/Users/yogesh/Documents/abinbev_project1/src/vector_store.py", line 48, in load_vector_store
+    vectordb = FAISS.load_local(VECTOR_STORE_PATH, embeddings, allow_dangerous_deserialization=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/vectorstores/faiss.py", line 1202, in load_local
+    faiss = dependable_faiss_import()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/langchain_community/vectorstores/faiss.py", line 57, in dependable_faiss_import
+    raise ImportError(
+ImportError: Could not import faiss python package. Please install it with `pip install faiss-gpu` (for CUDA supported GPU) or `pip install faiss-cpu` (depending on Python version).
+[2025-04-18 21:36:42] [INFO] main: Received query: Hi
+[2025-04-18 21:36:42] [INFO] src.qa_bot: Received query: Hi
+[2025-04-18 21:36:42] [INFO] src.qa_bot: Initializing QA chain with model: llama3.2
+[2025-04-18 21:36:42] [INFO] src.vector_store: Loading vector store from: vector_store/faiss_index
+[2025-04-18 21:36:49] [INFO] src.vector_store: Vector store loaded successfully.
+[2025-04-18 21:36:49] [INFO] src.qa_bot: QA chain successfully initialized.
+[2025-04-18 21:36:58] [INFO] src.qa_bot: Answer generated successfully.
+[2025-04-18 21:36:58] [DEBUG] src.qa_bot: Answer: I don't know the answer to your question based on the provided context about a roseapple kernel and some camera interface details. Could you please provide more information or clarify what you're asking?
+[2025-04-18 21:36:58] [DEBUG] src.qa_bot: Number of source documents retrieved: 4
+[2025-04-18 21:36:58] [INFO] main: Query processed successfully.
+[2025-04-18 21:37:32] [INFO] main: Received query: what is foundation on which Ubuntu Core 20 is built
+[2025-04-18 21:37:32] [INFO] src.qa_bot: Received query: what is foundation on which Ubuntu Core 20 is built
+[2025-04-18 21:37:32] [INFO] src.qa_bot: Initializing QA chain with model: llama3.2
+[2025-04-18 21:37:32] [INFO] src.vector_store: Loading vector store from: vector_store/faiss_index
+[2025-04-18 21:37:41] [INFO] src.vector_store: Vector store loaded successfully.
+[2025-04-18 21:37:41] [INFO] src.qa_bot: QA chain successfully initialized.
+[2025-04-18 21:37:46] [INFO] src.qa_bot: Answer generated successfully.
+[2025-04-18 21:37:46] [DEBUG] src.qa_bot: Answer: Ubuntu Core 20 is built on the foundation of Ubuntu 20.04 LTS (Focal Fossa).
+[2025-04-18 21:37:46] [DEBUG] src.qa_bot: Number of source documents retrieved: 4
+[2025-04-18 21:37:46] [INFO] main: Query processed successfully.
