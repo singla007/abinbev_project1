@@ -9,7 +9,7 @@ def get_qa_chain(model_name: str = "llama3.2") -> RetrievalQA:
     logger.info(f"Initializing QA chain with model: {model_name}")
     
     try:
-        llm = Ollama(model=model_name)
+        llm = Ollama(model=model_name) # base_url="http://host.docker.internal:11434") # this needs to be changed as im running in ollama in mac parent machine
         vectordb = load_vector_store()
         retriever = vectordb.as_retriever()
         
