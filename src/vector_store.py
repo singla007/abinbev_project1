@@ -31,6 +31,11 @@ def create_vector_store():
         vectordb.save_local(VECTOR_STORE_PATH)
         logger.info(f"Vector store saved successfully at: {VECTOR_STORE_PATH}")
 
+        return {
+            "status": "success",
+            "message": f"Vector store created with {len(chunks)} chunks",
+            "saved_at": VECTOR_STORE_PATH }
+
     except Exception as e:
         logger.error(f"Error occurred during vector store creation: {e}", exc_info=True)
         raise
