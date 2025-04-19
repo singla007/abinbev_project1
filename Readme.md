@@ -141,4 +141,9 @@ docker inspect <container_name> | grep -A 5 Cmd
 
 
 ## Screenshots
+
+### RAG Gradio UI
 ![RAG gradio UI](./images/RAG_UI.png)
+
+### RAG Swagger UI
+![RAG Swagger UI](./images/Swagger_UI.png)
