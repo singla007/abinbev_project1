@@ -121,3 +121,23 @@ docker images
 ```
 docker inspect <container_name> | grep -A 5 Cmd
 ```
+
+
+## Chunking Strategy
+
+impmplemented - Overlapping Chunking (Chunks are created with overlapping content, so context is preserved between adjacent chunks.)
+
+Future implementations - Hybrid chunking(Semantic + Keyword based + overlapping)
+
+## What are the best and fast ways to parse the documents?
+
+Parallel / Batched Parsing for Many Files
+
+Using generators for large files.
+
+Incremental Parsing for Streaming Data
+
+Regular Expressions
+
+Large Language Models based parsing with parallel processing and chunking. It is helpful in understanding unstructured data and complex documents.
+
