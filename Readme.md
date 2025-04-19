@@ -138,3 +138,7 @@ docker inspect <container_name> | grep -A 5 Cmd
 - Incremental Parsing for Streaming Data  
 - Regular Expressions  
 - Large Language Models based parsing with parallel processing and chunking. It is helpful in understanding unstructured data and complex documents.
+
+
+## Screenshots
+![RAG gradio UI](./images/RAG_UI.png)
