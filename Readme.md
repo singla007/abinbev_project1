@@ -129,6 +129,36 @@ docker inspect <container_name> | grep -A 5 Cmd
 ```
 
 
+## 🔧 Ollama Installation & LLaMA 3.2 Setup
+
+### 🧱 Install Ollama
+
+On macOS or Linux (via curl):
+
+```
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+On Windows:
+
+Download and install from the official Ollama website.
+
+### 🦙 Run LLaMA 3.2 with Ollama
+
+Ollama supports various models including LLaMA. To run LLaMA 3.2, pull the model:
+
+```
+ollama pull llama3
+```
+
+To run the model:
+
+```
+ollama run llama3
+```
+
+This will download and start the Meta LLaMA 3.2 model locally via Ollama. Once started, you can make requests using the local API at http://localhost:11434.
+
 ## Chunking Strategy
 
 **impmplemented** - Overlapping Chunking (Chunks are created with overlapping content, so context is preserved between adjacent chunks.)
