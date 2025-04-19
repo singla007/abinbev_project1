@@ -2,6 +2,12 @@
 
 This project provides a question-answering interface using LLMs and vector search powered by FastAPI, Ollama, gradio and Docker.
 
+## Demo Video
+
+[▶️ Watch the Demo Video with Docker](https://drive.google.com/file/d/1-oRpWMy8Ervl-kPosSTSAztmAUDSCMwk/view?usp=sharing)
+[▶️ Watch the Demo Video with Gradio UI](https://drive.google.com/file/d/1yk1YOLvSsS_b9PNn3AXJc7i6LX0XB_wY/view?usp=sharing)
+[▶️ Watch the Demo Video with Swagger UI](https://drive.google.com/file/d/1X83xA5Vn0XMaIv31DsvC5y283HtRhmGe/view?usp=sharing)
+
 ## 📦 Installation
 
 ### 1. Clone the Repository
@@ -147,3 +153,5 @@ docker inspect <container_name> | grep -A 5 Cmd
 
 ### RAG Swagger UI
 ![RAG Swagger UI](./images/Swagger_UI.png)
+
+
