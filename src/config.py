@@ -2,8 +2,8 @@ import os
 
 DATA_PATH = "data/ubuntu-docs"
 VECTOR_STORE_PATH = "vector_store/faiss_index"
-CHUNK_SIZE = 500
-CHUNK_OVERLAP = 100
+CHUNK_SIZE = 5000
+CHUNK_OVERLAP = 400
 
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
